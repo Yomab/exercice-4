@@ -9,14 +9,28 @@
             <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
             <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
             <label for="city">Ville : </label><input type="text" name="city" id="city"/>
-            <button  name="submit" id="submit" onClick="Valider();"></button>
+            <button  name="submit" id="submit" onClick="Valider();">Valider</button>
         </form>
+
+
         <script>
           function Valider() {
+
           var Valider1 = document.getElementById('lastname').value;
           var Valider2 = document.getElementById('firstname').value;
           var Valider3 = document.getElementById('city').value;
           alert("Prénom : " + Valider1 + "\nNom : " + Valider2 + "\nville : " + Valider3);
+          var regexText = /^[a-zA-Zéù\-ïçë]+$/;
+     if (regexText.test(lastname) != true) {
+       alert('Vous vous êtes trompé dans le nom');
+     } else if (!regexText.test(firstname)){
+       alert('Vous vous êtes trompé dans le prénom')
+     } else if (!regexText.test(city)){
+       alert('Vous vous êtes trompé dans la ville')
+     } else {
+     alert(lastname + "\n" + firstname + "\n" + city);
+     }
+   }
         }
         </script>
     </body>
