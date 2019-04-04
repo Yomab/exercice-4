@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice4</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
+            <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
+            <label for="city">Ville : </label><input type="text" name="city" id="city"/>
+            <button  name="submit" id="submit" onClick="Valider();"></button>
+        </form>
+        <script>
+          function Valider() {
+          var Valider1 = document.getElementById('lastname').value;
+          var Valider2 = document.getElementById('firstname').value;
+          var Valider3 = document.getElementById('city').value;
+          alert("Prénom : " + Valider1 + "\nNom : " + Valider2 + "\nville : " + Valider3);
+        }
+        </script>
+    </body>
+</html>
